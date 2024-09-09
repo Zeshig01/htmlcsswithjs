@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    body {
+      background-color: #64BA50; /* Green background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    
+    .login-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      width: 320px;
+    }
+    
+    .input-field {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    .login-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50; /* Green button */
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .login-btn:hover {
+      background-color: #45a049;
+    }
+    
+    .register-link {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    
+    .register-link a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <form id="login-form">
+        <input type="text" id="username" placeholder="username" class="input-field" required>
+        <input type="password" id="password" placeholder="password" class="input-field" required>
+        <button type="submit" class="login-btn">LOGIN</button>
+        <div class="register-link">
+          <span>Not registered? <a href="#">Create an account</a></span>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents the form from submitting
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      console.log('Username:', username);
+      console.log('Password:', password);
+    });
+  </script>
+</body>
+</html>
